@@ -1,0 +1,39 @@
+.head2{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/carrot.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.card{
+    border: none;
+}
+
+
+.head-text{
+    font-size: 60px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #fff;
+}
+
+body{
+    font-family: 'McLaren', cursive;
+}
+
+.cart, .cart:hover{
+    background: #fb8c00;
+    color: #fff;
+}
+
+.btn{
+    border-radius: 0;
+}
+
+@media (max-width: 768.98px) {
+  .head-text{
+      font-size: 40px;
+  }
+}
