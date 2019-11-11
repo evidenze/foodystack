@@ -62,6 +62,7 @@
                             <td>{{ $item->created_at->format('d-m-Y') }}</td>
                             <td>{{ $item->paid == true ? 'Paid' : 'Make payment' }}</td>
                             <td>{{ $item->delivered == true ? 'Delivered' : 'Pending delivery' }}</td>
+                            <td><a class="btn cart" href="{{ route('productDetails', $item->id) }}">View Details</a></td>
                             </tr>
                             @endforeach
                         </tbody>

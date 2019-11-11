@@ -18,4 +18,20 @@ class AdminController extends Controller
 
         return view('admin', ['orders' => $orders]);
     }
+
+    public function showOrderDetails(Request $request, $id)
+    {
+        $orders = Orders::where('id', $id)->first();
+
+        return view('product-details', ['order' => $order]);
+    }
+
+    public function confirmDelivery()
+    {
+        $order = Orders::where('id', $request->id)->first();
+        $order->delivered = true;
+        $order->save();
+
+        return back()->with('delivered', 'Order has been confirmed as delivered.');
+    }
 }

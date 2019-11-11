@@ -25,6 +25,7 @@ Route::post('/add-to-cart', 'CartController@addToCart')->name('addToCart');
 Route::get('/cart', 'CartController@showCart')->name('showCart');
 Route::get('/checkout', 'CartController@checkout')->name('checkout');
 Route::get('/order/{id}', 'CartController@showOrderDetails')->name('orderDetails');
+Route::get('/product/{id}', 'AdminController@showOrderDetails')->name('productDetails');
 Route::get('/delete/{id}', 'CartController@deleteOrder')->name('deleteOrder');
 
 Route::prefix('admin')->group(function () {
