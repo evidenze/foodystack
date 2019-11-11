@@ -23,7 +23,7 @@ class AdminController extends Controller
     {
         $orders = Orders::where('id', $id)->first();
 
-        return view('product-details', ['order' => $order]);
+        return view('product-details', ['order' => $orders]);
     }
 
     public function confirmDelivery()
