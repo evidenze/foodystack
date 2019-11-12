@@ -28,6 +28,12 @@ body{
     color: #fff;
 }
 
+.greet, .greet:hover{
+    background: #fff;
+    color: #5e35b1;
+    padding: 10px 30px;
+}
+
 .btn{
     border-radius: 0;
 }
