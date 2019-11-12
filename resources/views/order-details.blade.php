@@ -7,23 +7,29 @@
     </div>
 @endif
 
-<div class="container mt-5">
-  <div class="card p-3 shadow-sm">
+<div class="container mt-5 mb-5">
+  <h4>Order Details</h4><br>
+  <div class="card p-5 shadow-sm">
    <div class="row mb-5">
-       <div class="col-md-2">
-           <h4>Product:</br><br>{{ $order->name }}</h4>
+       <div class="col-md-2 mb-3">
+           <p class="text-secondary">Product:</p>
+           <p class="font-weight-bold">{{ $order->name }}</p>
        </div>
-       <div class="col-md-2">
-           <h4>Quantity:</br><br>{{ $order->quantity }}</h4>
+       <div class="col-md-2 mb-3">
+           <p class="text-secondary">Quantity:</p>
+           <p class="font-weight-bold">{{ $order->quantity }}</p>
        </div>
-       <div class="col-md-2">
-           <h4>Payment Status:</br><br>{{ $order->paid == true ? 'Paid' : 'Pending payment' }}</h4>
+       <div class="col-md-2 mb-3">
+           <p class="text-secondary">Payment Status:</p>
+           <p class="font-weight-bold">{{ $order->paid == true ? 'Paid' : 'Pending payment' }}</p>
        </div>
-       <div class="col-md-2">
-           <h4>Product:</br><br>{{ $order->name }}</h4>
+       <div class="col-md-2 mb-3">
+           <p class="text-secondary">Prize:</p>
+           <p class="font-weight-bold">{{ number_format($order->prize) }}</p>
        </div>
-       <div class="col-md-4">
-           <h4>Delivery Status:</br><br>{{ $order->delivered == true ? 'Delivered' : 'Pending Delivery' }}</h4>
+       <div class="col-md-4 mb-3">
+           <p class="text-secondary">Delivery Status:</p>
+           <p class="font-weight-bold">{{ $order->delivered == true ? 'Delivered' : 'Pending Delivery' }}</p>
        </div>
        
    </div>
