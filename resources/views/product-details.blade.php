@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 @if(session()->has('delivered'))
@@ -19,7 +19,7 @@
            <h4>Payment Status:</br><br>{{ $order->paid == true ? 'Paid' : 'Pending payment' }}</h4>
        </div>
        <div class="col-md-3">
-           <h4>Product:</br><br>{{ $order->name }}</h4>
+           <h4>Delivery Status:</br><br>{{ $order->paid == true ? 'Delivered' : 'Pending delivery' }}</h4>
        </div>
    </div>
 

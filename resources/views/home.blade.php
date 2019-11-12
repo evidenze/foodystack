@@ -10,8 +10,8 @@
 
                 <div class="card-body">
                    @if (count($orders) == 0)
-                    <h4>No order yet.</h4><br>
-                    <a class="btn cart" href="{{ url('/') }}">Go to Shop</a>
+                    <h4 class="text-center">No order yet.</h4><br>
+                    <p class="text-center"><a class="btn cart" href="{{ url('/welcome') }}">Go to Shop</a></p>
 
                     @else
                     <div class="table-responsive">

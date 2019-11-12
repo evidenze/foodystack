@@ -20,7 +20,7 @@
                             <tr>
                             <td>{{ session('name') }}</td>
                             <td>{{ session('quantity') }}</td>
-                            <td>NGN {{ number_format(session('prize') * session('quantity')) }}</td>
+                            <td>NGN {{ number_format(session('amount') * session('quantity')) }}</td>
                             </tr>
                         </tbody>
                         </table>

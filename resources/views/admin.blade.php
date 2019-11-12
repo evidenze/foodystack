@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <h4 class="font-weight-bold">Admin Dashboard</h4>
@@ -37,8 +37,8 @@
 
                 <div class="card-body">
                    @if (count($orders) == 0)
-                    <h4>No order made.</h4><br>
-                    <a class="btn cart" href="{{ url('/') }}">Go to Shop</a>
+                    <h4 class="text-center">No order made.</h4><br>
+                    <p class="text-center"><a class="btn cart" href="{{ url('/') }}">Go to Shop</a></p>
 
                     @else
                     <div class="table-responsive">
@@ -60,7 +60,7 @@
                             <td>{{ $item->quantity }}</td>
                             <td>NGN {{ number_format($item->prize) }}</td>
                             <td>{{ $item->created_at->format('d-m-Y') }}</td>
-                            <td>{{ $item->paid == true ? 'Paid' : 'Make payment' }}</td>
+                            <td>{{ $item->paid == true ? 'Paid' : 'Pending payment' }}</td>
                             <td>{{ $item->delivered == true ? 'Delivered' : 'Pending delivery' }}</td>
                             <td><a class="btn cart" href="{{ route('productDetails', $item->id) }}">View Details</a></td>
                             </tr>
