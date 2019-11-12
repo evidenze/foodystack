@@ -32,8 +32,8 @@
                 <br>
 
                 <input type="hidden" name="id" value="1"/>
-                    <input type="hidden" name="name" value="Rice">
-                    <input type="hidden" name="prize" value="4000">
+                    <input type="hidden" name="name" value="Fried Rice">
+                    <input type="hidden" name="prize" value="1200">
                     <button type="submit" class="btn cart">
                         Order Now
                     </button>

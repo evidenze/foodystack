@@ -31,7 +31,7 @@
                             <tr>
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->quantity }}</td>
-                            <td>NGN {{ $item->prize }}</td>
+                            <td>NGN {{ number_format($item->prize) }}</td>
                             <td>{{ $item->created_at->format('d-m-Y') }}</td>
                             <td>{{ $item->paid == true ? 'Paid' : 'Make payment' }}</td>
                             <td><a class="btn cart" href="{{ route('orderDetails', $item->id)}}">View Details</a></td>

@@ -8,6 +8,7 @@
 @endif
 
 <div class="container mt-5">
+  <div class="card p-3 shadow-sm">
    <div class="row mb-5">
        <div class="col-md-2">
            <h4>Product:</br><br>{{ $order->name }}</h4>
@@ -22,13 +23,13 @@
            <h4>Product:</br><br>{{ $order->name }}</h4>
        </div>
        <div class="col-md-4">
-           <h4>Delivery Status:</br><br>{{ $order->deliverd == true ? 'Delivered' : 'Pending Delivery' }}</h4>
+           <h4>Delivery Status:</br><br>{{ $order->delivered == true ? 'Delivered' : 'Pending Delivery' }}</h4>
        </div>
        
    </div>
 
    @if(!$order->paid)
-    <button id="send" class="btn btn-success" type="button">Make Payment</button>
+    <p><button id="send" class="btn btn-success" type="button">Make Payment</button></p>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
                     <script type="text/javascript" src="https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
                     <script type="text/javascript">
@@ -71,7 +72,7 @@
                       });
                     </script>
    @else
-       <a class="btn cart disabled" href="#">Paid</a><br><br>
+       <p><a class="btn cart disabled" href="#">Paid</a></p>
     @endif
 
     @if($order->delivered == false && $order->paid == true)
@@ -80,14 +81,15 @@
                 @method('PUT')
 
                     <input type="hidden" name="id" value="{{ $order->id }}">
-                    <button type="submit" class="btn btn-primary">
+                    <p>button type="submit" class="btn btn-primary">
                         Confirm Delivery
-                    </button>
+                    </button></p>
     </form>
     @elseif($order->delivered == false && $order->paid == false)
-    <a class="btn btn-primary disabled" href="#">Confirm delivery</a>
+    <p><a class="btn btn-primary disabled" href="#">Confirm delivery</a></p>
     @else
-        <a class="btn btn-primary disabled" href="#">Confirm delivery</a>
+        <p><a class="btn btn-primary disabled" href="#">Delivered</a></p>
    @endif
+</div>
 </div>
 @endsection
