@@ -22,5 +22,21 @@
            <h4>Product:</br><br>{{ $order->name }}</h4>
        </div>
    </div>
+
+
+
+   @if($order->delivered == false)
+   <form method="POST" action="{{ route('confirmDelivery') }}" >
+                @csrf
+                @method('PUT')
+
+                    <input type="hidden" name="id" value="{{ $order->id }}">
+                    <button type="submit" class="btn cart">
+                        Confirm Delivery
+                    </button>
+    </form>
+    @else
+    <a class="btn cart disabled" href="#">Product Delivered</a>
+   @endif
 </div>
 @endsection

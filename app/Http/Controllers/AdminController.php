@@ -15,8 +15,11 @@ class AdminController extends Controller
     public function index()
     {
         $orders = Orders::all();
+        $pending = Orders::where('delivered', false)->get();
+        $delivered = Orders::where('delivered', true)->get();
+        $earning = Orders::all()->sum('prize');
 
-        return view('admin', ['orders' => $orders]);
+        return view('admin', ['orders' => $orders, 'pending' => $pending, 'earning' => $earning, 'delivered' => $delivered]);
     }
 
     public function showOrderDetails(Request $request, $id)
@@ -26,7 +29,7 @@ class AdminController extends Controller
         return view('product-details', ['order' => $orders]);
     }
 
-    public function confirmDelivery()
+    public function confirmDelivery(Request $request)
     {
         $order = Orders::where('id', $request->id)->first();
         $order->delivered = true;

@@ -10,25 +10,25 @@
                 <div class="col-md-3 mb-3">
                     <div class="card shadow-sm p-3">
                         <p class="font-weight-bold">Total Orders</p>
-                        <h4>20</h4>
+                        <h4>{{ count($orders) }}</h4>
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <div class="card shadow-sm p-3">
                         <p class="font-weight-bold">Pending Orders</p>
-                        <h4>20</h4>
+                        <h4>{{ count($pending) }}</h4>
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <div class="card shadow-sm p-3">
                         <p class="font-weight-bold">Total Earnings</p>
-                        <h4>NGN 30,000</h4>
+                        <h4>NGN {{ number_format($earning) }}</h4>
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <div class="card shadow-sm p-3">
                         <p class="font-weight-bold">Delivered Orders</p>
-                        <h4>20</h4>
+                        <h4>{{ count($delivered) }}</h4>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                             <tr>
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->quantity }}</td>
-                            <td>NGN {{ $item->prize }}</td>
+                            <td>NGN {{ number_format($item->prize) }}</td>
                             <td>{{ $item->created_at->format('d-m-Y') }}</td>
                             <td>{{ $item->paid == true ? 'Paid' : 'Make payment' }}</td>
                             <td>{{ $item->delivered == true ? 'Delivered' : 'Pending delivery' }}</td>
