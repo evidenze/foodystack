@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container mt-5 mb-5">
+    <h4>Welcome {{ Auth::user()->firstname }}</h4><br><br>
     <div class="row">
-        <h4>Welcome {{ Auth::user()->firstname }}</h4><br><br>
         <div class="col-md-12">
             <div class="card shadow-sm">
                 <div class="card-header">My orders</div>
