@@ -9,17 +9,20 @@
 
 <div class="container mt-5">
    <div class="row mb-5">
-       <div class="col-md-3">
+       <div class="col-md-2">
            <h4>Product:</br><br>{{ $order->name }}</h4>
        </div>
-       <div class="col-md-3">
+       <div class="col-md-2">
            <h4>Quantity:</br><br>{{ $order->quantity }}</h4>
        </div>
-       <div class="col-md-3">
+       <div class="col-md-2">
            <h4>Payment Status:</br><br>{{ $order->paid == true ? 'Paid' : 'Pending payment' }}</h4>
        </div>
-       <div class="col-md-3">
+       <div class="col-md-2">
            <h4>Product:</br><br>{{ $order->name }}</h4>
+       </div>
+       <div class="col-md-4">
+           <h4>Delivery Status:</br><br>{{ $order->deliverd == true ? 'Delivered' : 'Pending Delivery' }}</h4>
        </div>
        
    </div>

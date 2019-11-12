@@ -18,8 +18,9 @@
     <div class="card-deck text-center mt-5 mb-5">
         <div class="card mb-3 shadow-sm">
             <div class="card-body">
-            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;">
-            <h5 class="card-title">Fried Rice</h5><br>
+            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;"><br>
+            <h5 class="card-title font-weight-bold">Fried Rice</h5>
+            <p class="text-center text-secondary">NGN1,200</p>
             <form method="POST" action="{{ route('addToCart') }}" >
                 @csrf
                 <input placeholder="Quantity" type="number" name="quantity" class="form-control @error('quantity') is-invalid @enderror" required>
@@ -41,8 +42,9 @@
         </div>
         <div class="card mb-3 shadow-sm">
             <div class="card-body">
-            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;">
-            <h5 class="card-title">Fried Rice</h5><br>
+            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;"><br>
+            <h5 class="card-title font-weight-bold">Sharwarma</h5>
+            <p class="text-center text-secondary">NGN1,500</p>
                <form method="POST" action="{{ route('addToCart') }}" >
                 @csrf
                 <input placeholder="Quantity" type="number" name="quantity" class="form-control @error('quantity') is-invalid @enderror" required>
@@ -54,18 +56,19 @@
                 <br>
 
                 <input type="hidden" name="id" value="2"/>
-                    <input type="hidden" name="name" value="Beans">
-                    <input type="hidden" name="prize" value="600">
+                    <input type="hidden" name="name" value="Sharwama">
+                    <input type="hidden" name="prize" value="1500">
                     <button type="submit" class="btn cart">
-                        Add to Cart
+                        Order Now
                     </button>
             </form>
         </div>
         </div>
         <div class="card mb-3 shadow-sm">
             <div class="card-body">
-            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;">
-            <h5 class="card-title">Fried Rice</h5><br>
+            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;"><br>
+            <h5 class="card-title font-weight-bold">Meat Pie</h5>
+            <p class="text-center text-secondary">NGN600</p>            
                <form method="POST" action="{{ route('addToCart') }}" >
                 @csrf
                 <input placeholder="Quantity" type="number" name="quantity" class="form-control @error('quantity') is-invalid @enderror" required>
@@ -76,19 +79,20 @@
                 @enderror
                 <br>
 
-                <input type="hidden" name="id" value="2"/>
-                    <input type="hidden" name="name" value="Beans">
+                <input type="hidden" name="id" value="3"/>
+                    <input type="hidden" name="name" value="Meat Pie">
                     <input type="hidden" name="prize" value="600">
                     <button type="submit" class="btn cart">
-                        Add to Cart
+                        Order Now
                     </button>
             </form>
         </div>
         </div>
         <div class="card mb-3 shadow-sm">
             <div class="card-body">
-            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;">
-            <h5 class="card-title">Fried Rice</h5><br>
+            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;"><br>
+            <h5 class="card-title font-weight-bold">Fried Rice</h5>
+            <p class="text-center text-secondary">NGN1,200</p>
                <form method="POST" action="{{ route('addToCart') }}" >
                 @csrf
                 <input placeholder="Quantity" type="number" name="quantity" class="form-control @error('quantity') is-invalid @enderror" required>
@@ -99,11 +103,11 @@
                 @enderror
                 <br>
 
-                <input type="hidden" name="id" value="2"/>
+                <input type="hidden" name="id" value="4"/>
                     <input type="hidden" name="name" value="Beans">
                     <input type="hidden" name="prize" value="600">
                     <button type="submit" class="btn cart">
-                        Add to Cart
+                        Order Now
                     </button>
             </form>
         </div>
@@ -113,8 +117,9 @@
     <div class="card-deck text-center mt-5 mb-5">
         <div class="card mb-3 shadow-sm">
             <div class="card-body">
-            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;">
-            <h5 class="card-title">Fried Rice</h5><br>
+            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;"><br>
+            <h5 class="card-title font-weight-bold">Fried Rice</h5>
+            <p class="text-center text-secondary">NGN1,200</p>
                <form method="POST" action="{{ route('addToCart') }}" >
                 @csrf
                 <input placeholder="Quantity" type="number" name="quantity" class="form-control @error('quantity') is-invalid @enderror" required>
@@ -125,19 +130,20 @@
                 @enderror
                 <br>
 
-                <input type="hidden" name="id" value="2"/>
+                <input type="hidden" name="id" value="5"/>
                     <input type="hidden" name="name" value="Beans">
                     <input type="hidden" name="prize" value="600">
                     <button type="submit" class="btn cart">
-                        Add to Cart
+                        Order Now
                     </button>
             </form>
         </div>
         </div>
        <div class="card mb-3 shadow-sm">
             <div class="card-body">
-            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;">
-            <h5 class="card-title">Fried Rice</h5><br>
+            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;"><br>
+            <h5 class="card-title font-weight-bold">Fried Rice</h5>
+            <p class="text-center text-secondary">NGN1,200</p>
                <form method="POST" action="{{ route('addToCart') }}" >
                 @csrf
                 <input placeholder="Quantity" type="number" name="quantity" class="form-control @error('quantity') is-invalid @enderror" required>
@@ -148,19 +154,20 @@
                 @enderror
                 <br>
 
-                <input type="hidden" name="id" value="2"/>
+                <input type="hidden" name="id" value="6"/>
                     <input type="hidden" name="name" value="Beans">
                     <input type="hidden" name="prize" value="600">
                     <button type="submit" class="btn cart">
-                        Add to Cart
+                        Order Now
                     </button>
             </form>
         </div>
         </div>
         <div class="card mb-3 shadow-sm">
             <div class="card-body">
-            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;">
-            <h5 class="card-title">Fried Rice</h5><br>
+            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;"><br>
+            <h5 class="card-title font-weight-bold">Fried Rice</h5>
+            <p class="text-center text-secondary">NGN1,200</p>
                <form method="POST" action="{{ route('addToCart') }}" >
                 @csrf
                 <input placeholder="Quantity" type="number" name="quantity" class="form-control @error('quantity') is-invalid @enderror" required>
@@ -171,19 +178,20 @@
                 @enderror
                 <br>
 
-                <input type="hidden" name="id" value="2"/>
+                <input type="hidden" name="id" value="7"/>
                     <input type="hidden" name="name" value="Beans">
                     <input type="hidden" name="prize" value="600">
                     <button type="submit" class="btn cart">
-                        Add to Cart
+                        Order Now
                     </button>
             </form>
         </div>
         </div>
         <div class="card mb-3 shadow-sm">
             <div class="card-body">
-            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;">
-            <h5 class="card-title">Fried Rice</h5><br>
+            <img src="{{ url('/images/carrot.jpg') }}" class="mx-auto d-block" alt="..." style="width:100%;height:200px;object-fit:contain;"><br>
+            <h5 class="card-title font-weight-bold">Fried Rice</h5>
+            <p class="text-center text-secondary">NGN1,200</p>
                <form method="POST" action="{{ route('addToCart') }}" >
                 @csrf
                 <input placeholder="Quantity" type="number" name="quantity" class="form-control @error('quantity') is-invalid @enderror" required>
@@ -194,11 +202,11 @@
                 @enderror
                 <br>
 
-                <input type="hidden" name="id" value="2"/>
+                <input type="hidden" name="id" value="8"/>
                     <input type="hidden" name="name" value="Beans">
                     <input type="hidden" name="prize" value="600">
                     <button type="submit" class="btn cart">
-                        Add to Cart
+                        Order Now
                     </button>
             </form>
         </div>
