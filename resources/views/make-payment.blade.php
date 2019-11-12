@@ -9,6 +9,8 @@
                 <div class="card-body text-center">
                     <p>Please click the button below to make payment for your order</p><br>
 
+                    <h4>NGN {{ number_format(session('amount') * session('quantity')) }}</h4><br>
+
 
                     <button id="send" class="btn btn-success" type="button">Make Payment</button>
 
