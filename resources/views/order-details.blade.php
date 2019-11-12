@@ -25,7 +25,7 @@
        </div>
        <div class="col-md-2 mb-3">
            <p class="text-secondary">Prize:</p>
-           <p class="font-weight-bold">{{ number_format($order->prize) }}</p>
+           <p class="font-weight-bold">NGN {{ number_format($order->prize) }}</p>
        </div>
        <div class="col-md-4 mb-3">
            <p class="text-secondary">Delivery Status:</p>
