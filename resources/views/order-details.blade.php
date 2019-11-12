@@ -71,7 +71,23 @@
                       });
                     </script>
    @else
-       <a class="btn cart disabled" href="#">Paid</a>
+       <a class="btn cart disabled" href="#">Paid</a><br><br>
     @endif
+
+    @if($order->delivered == false && $order->paid == true)
+   <form method="POST" action="{{ route('confirmDelivery') }}" >
+                @csrf
+                @method('PUT')
+
+                    <input type="hidden" name="id" value="{{ $order->id }}">
+                    <button type="submit" class="btn btn-primary">
+                        Confirm Delivery
+                    </button>
+    </form>
+    @elseif($order->delivered == false && $order->paid == false)
+    <a class="btn btn-primary disabled" href="#">Confirm delivery</a>
+    @else
+        <a class="btn btn-primary disabled" href="#">Confirm delivery</a>
+   @endif
 </div>
 @endsection
