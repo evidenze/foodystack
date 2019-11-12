@@ -43,8 +43,11 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/home') }}">{{ __('Home') }}</a>
+                                <a class="nav-link" href="{{ url('/') }}">{{ __('Welcome Page') }}</a>
                             </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/home') }}">{{ __('Home') }}</a>
+                            </li>                            
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('showCart') }}">{{ __('About Us') }}</a>
                             </li>

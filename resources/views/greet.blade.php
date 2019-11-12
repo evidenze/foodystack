@@ -25,7 +25,7 @@
 <body style="background:#5e35b1;">
     <div id="app">
        <div class="container mt-5 text-center">
-           <h1 class="text-white text-uppercase" style="padding-top:100px;">Online Food Ordering and Delivery System</h1><br>
+           <h1 class="text-white text-uppercase font-weight-bold" style="padding-top:100px;line-height:1.7;">Online Food Ordering <br>and Delivery System</h1><br>
            <a href="{{ url('/welcome') }}" class="btn greet">Visit Site</a>
        </div>
     </div>
