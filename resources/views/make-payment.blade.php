@@ -41,7 +41,7 @@
                               txref = response.tx.txRef, chargeResponse = response.tx.chargeResponseCode;
                               if (chargeResponse == "00" || chargeResponse == "0") {
 
-                                window.location = '.../confirm-payment/'+txref; //Add your success page here
+                                window.location = '../confirm-payment/'+txref; //Add your success page here
 
                               } else {
                                 window.location = "https://your_URL/paymentverification.php?txref="+txref;  //Add your failure page here
