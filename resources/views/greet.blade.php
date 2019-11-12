@@ -25,7 +25,7 @@
 </head>
 <body style="background:#5e35b1;font-family: 'DM Sans', sans-serif;">
     <div id="app">
-       <div class="container mt-5 text-center">
+       <div class="container mt-5 text-center mb-5">
            <h1 class="text-white text-uppercase font-weight-bold" style="padding-top:100px;line-height:1.7;">Online Food Ordering <br>and Delivery System<br>By<br>Ubong Sylvanus Akpan</h1>
            <p class="text-white">This project is branded as FoodyStack.</p><br>
            <a href="{{ url('/welcome') }}" class="btn greet font-weight-bold text-uppercase">Visit Site</a>&nbsp;

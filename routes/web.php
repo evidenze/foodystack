@@ -32,7 +32,7 @@ Route::get('/order/{id}', 'CartController@showOrderDetails')->name('orderDetails
 Route::get('/product/{id}', 'AdminController@showOrderDetails')->name('productDetails');
 Route::get('/delete/{id}', 'CartController@deleteOrder')->name('deleteOrder');
 
-Route::prefix('admin')->group(function () {
+Route::prefix('/office/admin')->group(function () {
     Route::get('/', 'AdminController@index')->name('admin');
     Route::put('/confirm-delivery', 'AdminController@confirmDelivery')->name('confirmDelivery');
 });
