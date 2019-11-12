@@ -26,7 +26,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/welcome') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -49,10 +49,10 @@
                                 <a class="nav-link" href="{{ url('/home') }}">{{ __('Home') }}</a>
                             </li>                            
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('showCart') }}">{{ __('About Us') }}</a>
+                                <a class="nav-link" href="#">{{ __('About Us') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('showCart') }}">{{ __('Contact Us') }}</a>
+                                <a class="nav-link" href="#">{{ __('Contact Us') }}</a>
                             </li>
                         @guest
                             <li class="nav-item">
